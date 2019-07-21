@@ -4,7 +4,7 @@ def config_status():
         '200': '200'
     }
     message = {
-        '000': 'Access failed',
+        '000': 'Xay ra loi',
         '200': 'Done!'
 
     }
