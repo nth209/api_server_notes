@@ -31,4 +31,20 @@ class userDetail(models.Model):
     id_thanhpho = models.ForeignKey(thanhpho, on_delete=models.CASCADE)
     id_quan = models.ForeignKey(quan, on_delete=models.CASCADE)
     id_xa = models.ForeignKey(xa, on_delete=models.CASCADE)
+    device = models.CharField("Thiết bị đăng nhập khi lưu", max_length=255, default="")
     detele_flg = models.IntegerField(default=0)
+
+
+# == == = == == == == == == == == == == Path Models == == == == == == == == == == == == == == = #
+
+class linkTable(models.Model):
+    id = models.AutoField(primary_key=True)
+    name = models.CharField("Name link", max_length=255, default="Unknown")
+    path = models.TextField("Path Url", default="")
+    des = models.CharField("Mô tả", default="",max_length=255)
+    device = models.CharField("Thiết bị đăng nhập khi lưu",max_length=255, default="")
+    user_id = models.IntegerField(default=None)
+    display_flg = models.IntegerField(default=2) # 0 chi nguoi do moi co the xem # 1 moi nguoi duoc xem 2 chi nguoi do va admin duoc xem
+    delete_flg = models.IntegerField(default=0)
+
+# == == = == == == == == == == == == == Notes Models == == == == == == == == == == == == == == = #

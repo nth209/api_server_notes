@@ -19,6 +19,7 @@ from api import views
 from django.views.generic import RedirectView
 
 urlpatterns = [
-    path('', RedirectView.as_view(url='http://notes012.herokuapp.com/')),
-    path('api/api-login/', views.apiViewsLogin, name='api_login')
+    path('', RedirectView.as_view(url='https://notes012.herokuapp.com/')),
+    path('api/api-login/', views.apiViewsLogin, name='api_login'),
+    path('api/path/store/', views.savePath, name='api_path_store')
 ]
